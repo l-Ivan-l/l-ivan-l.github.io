@@ -1,0 +1,9 @@
+{
+  "name": "l-ivan-l-portfolio",
+  "private": true,
+  "description": "Static portfolio site. Zero dependencies — build.js uses only Node built-ins.",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node dev.js"
+  }
+}

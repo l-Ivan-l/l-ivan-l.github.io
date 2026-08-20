@@ -1,0 +1,45 @@
+{
+  "_comment": "Global facts used on every page. Changing 'origin' updates the canonical URL, both social-preview URLs and the JSON-LD url everywhere at once.",
+
+  "origin": "https://l-ivan-l.github.io",
+  "name": "Iván Almanza",
+  "fullName": "Alfonso Iván Almanza González",
+  "email": "ivan.almanza.g@gmail.com",
+  "location": "Mexico City",
+  "themeColor": "#0a0c0f",
+  "ogImage": "/media/og-preview.jpg",
+  "defaultDescription": "Senior software engineer building the tools other people use to make games — editor tooling, asset pipelines, developer-facing SDKs and self-service authoring tools. Shipped on Steam, Xbox, PS4, Switch, iOS and Apple Arcade.",
+
+  "navMark": { "head": "ivan", "tail": "almanza" },
+
+  "nav": [
+    { "label": "Home",           "path": "/" },
+    { "label": "Experience",     "path": "/experience/" },
+    { "label": "Side projects",  "path": "/work/" },
+    { "label": "About",          "path": "/about/" }
+  ],
+
+  "social": [
+    { "label": "GitHub",   "href": "https://github.com/l-Ivan-l" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/alfonso-ivn-almanza-gonzlez/" },
+    { "label": "itch.io",  "href": "https://iv4n.itch.io/" }
+  ],
+
+  "resume": { "label": "Résumé (PDF)", "href": "/assets/Ivan_Almanza_Resume.pdf" },
+
+  "footer": {
+    "left": "Alfonso Iván Almanza González — Mexico City",
+    "right": "English (fluent) · Spanish (native)"
+  },
+
+  "jsonld": {
+    "jobTitle": "Senior Software Engineer — Tools & Pipelines",
+    "knowsLanguage": ["en", "es"],
+    "knowsAbout": [
+      "Unity", "Unreal Engine 5", "UEFN", "C#", "C++", "Verse",
+      "Editor tooling", "Asset pipelines", "Developer-facing SDKs and APIs",
+      "Self-service authoring tools",
+      "Console certification", "Performance profiling"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+# Generated HTML is written with \n line endings by build.js.
+# Without this, Git on Windows rewrites them to \r\n on checkout and every
+# build then shows as a whole-file diff.
+*.html text eol=lf
+*.json text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+
+# Binary assets — never touch these.
+*.pdf  binary
+*.jpg  binary
+*.png  binary
+*.mp4  binary

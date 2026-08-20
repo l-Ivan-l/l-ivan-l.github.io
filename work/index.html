@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     GENERATED FILE — DO NOT EDIT.
+     Source: content/*.json + templates/base.html
+     Rebuild with: npm run build
+     ============================================================ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Side projects — Iván Almanza</title>
+<meta name="description" content="Personal projects, built and shipped on my own time — a Verse/UEFN wave shooter, and an N64-inspired arcade game built from a single piece of cover art. Code, 3D art and release all mine.">
+<link rel="canonical" href="https://l-ivan-l.github.io/work/">
+
+<!-- Social preview. og:image and og:url MUST be absolute — relative paths are
+     silently dropped by LinkedIn, X, Slack and Discord. All four absolute URLs
+     below are derived from "origin" in content/site.json. -->
+<meta property="og:title" content="Side projects — Iván Almanza">
+<meta property="og:description" content="Personal projects, built and shipped on my own time — a Verse/UEFN wave shooter, and an N64-inspired arcade game built from a single piece of cover art. Code, 3D art and release all mine.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://l-ivan-l.github.io/work/">
+<meta property="og:image" content="https://l-ivan-l.github.io/media/og-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://l-ivan-l.github.io/media/og-preview.jpg">
+
+<meta name="theme-color" content="#0a0c0f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0c0f'/><text x='16' y='23' font-family='monospace' font-size='19' font-weight='700' fill='%23ffb347' text-anchor='middle'>iA</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body data-page="work">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-mark" href="/">ivan<span>.</span><span class="tail">almanza</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/">Experience</a>
+      <a href="/work/" class="active" aria-current="page">Side projects</a>
+      <a href="/about/">About</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Side projects</div>
+      <h1>What I build on my own time</h1>
+      <p class="section-note">Self-directed work, finished and released — not prototypes. I write the code and I author the art. Professional credits are on the <a href="/experience/">Experience</a> page.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <article class="project" id="ufortnite">
+        <div class="media">
+          <iframe src="https://www.youtube-nocookie.com/embed/d-z-5rCZ24c?rel=0" title="U.F.Ortnite" allowfullscreen loading="lazy"></iframe>
+        </div>
+
+        <div class="project-body">
+          <div class="project-head">
+            <h2>U.F.Ortnite</h2>
+            <div class="project-meta">UEFN · Verse · Released April 2025</div>
+          </div>
+          <div class="disc-tags"><span class="disc-tag">Gameplay</span><span class="disc-tag">Personal</span></div>
+          <div class="project-role">Solo — design, code, 3D art, UI, QA, release</div>
+
+          <div class="block">
+            <div class="block-label">Problem</div>
+            <p>A self-directed project to learn Verse and the UEFN toolchain. UEFN gives you a sandbox and takes away most of your tools — no object pooling, no conventional profiler, hard memory ceilings, and a runtime that has to hold 60&nbsp;fps on Switch and mobile as well as PC. A wave-based arcade shooter is exactly the genre that breaks under those constraints.</p>
+          </div>
+          <div class="block">
+            <div class="block-label">Approach</div>
+            <p>I built a <strong>custom object pooling system in Verse</strong> to keep frame times stable during wave spawns, working around the absence of a built-in pooling pattern in the language, then designed the enemy wave system, enemy behaviour, score rank progression and level randomisation around a fixed entity budget. All 3D models, UI and animation are mine — the art was authored against the same budget the code enforced.</p>
+          </div>
+          <div class="block">
+            <div class="block-label">Result</div>
+            <p>A complete arcade gameplay loop, shipped and stable across every supported platform with no frame-rate regressions during peak waves. Scoped, finished and released solo.</p>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">Stable frame times <em>across all supported platforms</em></div>
+            <div class="metric">Custom pooling <em>built around Verse&#39;s constraints</em></div>
+            <div class="metric">Solo <em>— code + art + release</em></div>
+          </div>
+          <div class="tags"><span class="tag">UEFN</span><span class="tag">Verse</span><span class="tag">Object pooling</span><span class="tag">Gameplay systems</span><span class="tag">Enemy AI</span><span class="tag">Blender</span><span class="tag">UI</span><span class="tag">Performance</span></div>
+          <div class="project-links">
+            <a class="btn btn-primary" href="https://www.fortnite.com/@iv4n_al.go/5784-9846-6319" target="_blank" rel="noopener">Play it</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project" id="monster-mash">
+        <div class="media">
+          <img src="/media/monster-mash.jpg" alt="Monster Mash cover art — the game&#39;s logo over a purple gradient" loading="lazy">
+        </div>
+
+        <div class="project-body">
+          <div class="project-head">
+            <h2>Monster Mash</h2>
+            <div class="project-meta">Windows &amp; macOS · Released June 2023</div>
+          </div>
+          <div class="disc-tags"><span class="disc-tag">Gameplay</span><span class="disc-tag">Personal</span></div>
+          <div class="project-role">Solo — game design, code, 3D art, texturing, animation, VFX, release</div>
+
+          <div class="block">
+            <div class="block-label">Problem</div>
+            <p>The whole brief was a single static image: a <strong>fictional N64 cartridge cover</strong> for a game that never existed, drawn by <a href="https://twitter.com/melodillo" target="_blank" rel="noopener">@melodillo</a>. No design document, no asset list, no reference for how any of it moved. Everything had to be derived — what genre it was, what the loop was, and what that art would have looked like running on the hardware it was pretending to ship for.</p>
+          </div>
+          <div class="block">
+            <div class="block-label">Approach</div>
+            <p>I designed and built the entire game solo, and <strong>authored every asset in it</strong> — 3D models, textures, rigging and animation, VFX and UI. The N64 look is reconstructed rather than filtered: I modelled to hard low-poly silhouettes against a deliberately small texture budget and lit flat and high-contrast, so the era's constraints shaped the art while it was being authored instead of being applied as a post-process afterwards. The gameplay was designed around the same reading of the cover — a fast isometric arcade loop, ten stages, built for a gamepad.</p>
+          </div>
+          <div class="block">
+            <div class="block-label">Result</div>
+            <p>Shipped on Windows and macOS. It is the clearest single piece of evidence that the code and the art here are the same person: the only thing in it I didn't make is the cartridge cover it started from.</p>
+          </div>
+
+          <div class="metrics">
+            <div class="metric">1 reference image <em>the entire brief</em></div>
+            <div class="metric">10 stages <em>designed, built and shipped solo</em></div>
+            <div class="metric">Every asset <em>models, textures, animation, VFX, UI</em></div>
+          </div>
+          <div class="tags"><span class="tag">Game design</span><span class="tag">3D modelling</span><span class="tag">Texturing</span><span class="tag">Rigging &amp; animation</span><span class="tag">VFX</span><span class="tag">UI</span><span class="tag">Level design</span><span class="tag">Low-poly</span></div>
+          <div class="project-links">
+            <a class="btn btn-primary" href="https://iv4n.itch.io/monster-mash" target="_blank" rel="noopener">Get it on itch.io</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Alfonso Iván Almanza González — Mexico City</div>
+    <div>English (fluent) · Spanish (native)</div>
+  </div>
+</footer>
+
+</body>
+</html>

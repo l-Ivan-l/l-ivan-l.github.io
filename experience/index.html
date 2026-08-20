@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ============================================================
+     GENERATED FILE — DO NOT EDIT.
+     Source: content/*.json + templates/base.html
+     Rebuild with: npm run build
+     ============================================================ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experience — Iván Almanza</title>
+<meta name="description" content="Editor tooling, developer-facing SDKs and self-service authoring tools built at Scopely, Digital Vault Studio and Seashell Studio.">
+<link rel="canonical" href="https://l-ivan-l.github.io/experience/">
+
+<!-- Social preview. og:image and og:url MUST be absolute — relative paths are
+     silently dropped by LinkedIn, X, Slack and Discord. All four absolute URLs
+     below are derived from "origin" in content/site.json. -->
+<meta property="og:title" content="Experience — Iván Almanza">
+<meta property="og:description" content="Editor tooling, developer-facing SDKs and self-service authoring tools built at Scopely, Digital Vault Studio and Seashell Studio.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://l-ivan-l.github.io/experience/">
+<meta property="og:image" content="https://l-ivan-l.github.io/media/og-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://l-ivan-l.github.io/media/og-preview.jpg">
+
+<meta name="theme-color" content="#0a0c0f">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230a0c0f'/><text x='16' y='23' font-family='monospace' font-size='19' font-weight='700' fill='%23ffb347' text-anchor='middle'>iA</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<body data-page="experience">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-mark" href="/">ivan<span>.</span><span class="tail">almanza</span></a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/experience/" class="active" aria-current="page">Experience</a>
+      <a href="/work/">Side projects</a>
+      <a href="/about/">About</a>
+    </div>
+  </div>
+</nav>
+
+<main id="main" tabindex="-1">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="eyebrow">Professional experience</div>
+      <h1>Tools other people build games with</h1>
+      <p class="section-note">Most of this work is under NDA, so there are no screenshots — but the problems and the approach are worth reading. This is where most of the tooling, platform and console evidence lives.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="case" id="fbx-prefab-pipeline">
+        <h2>Unity Editor asset pipeline — FBX to game-ready prefab</h2>
+        <div class="case-meta">Digital Vault Studio · Game Programmer · Unity, C#</div>
+        <div class="disc-tags"><span class="disc-tag">Tools &amp; Pipeline</span></div>
+        <p>A physics-driven match game under a licensed IP needed hundreds of unique 3D models integrated by hand, one at a time — material presets, colliders, catalog entries, category and tuning fields. The pipeline was the bottleneck, not the modelling.</p>
+        <p>I <strong>helped build and extend a Unity Editor asset pipeline tool</strong> that took an imported FBX and ran the whole setup in a single pass: applying established material and texture presets, generating colliders from mesh shape, registering the entry in the ScriptableObject catalog, and exposing category and tuning fields for a manual pass at the end.</p>
+        <p>It removed most per-model manual setup at hundreds-of-models scale and gave artists a repeatable path from DCC export straight to in-game object — the kind of tool that gets used because it's faster than working around it.</p>
+      </div>
+
+      <div class="case" id="visual-editor">
+        <h2>Visual Editor — self-service In-App Message authoring</h2>
+        <div class="case-meta">Scopely · Technical lead · Unity, Java</div>
+        <div class="case-titles">Titles: Marvel Strike Force</div>
+        <div class="disc-tags"><span class="disc-tag">Tools &amp; Pipeline</span><span class="disc-tag">Platform &amp; SDK</span></div>
+        <p>Changing an in-app message meant shipping a new client build, so every copy fix and every live-ops message waited on a full release cycle. Non-technical marketing and live-ops staff had no way to ship on their own.</p>
+        <p>I was <strong>technical lead for Visual Editor</strong>, a self-service authoring tool spanning four teams — the platform web console, platform backend services, UX, and Marvel Strike Force as lead stakeholder. My contribution was the translation layer converting console-authored message definitions into a format the platform rendering SDK consumes at runtime, and the client-side SDK extension that renders it.</p>
+        <p>The infrastructure to render and deliver messages already existed on both ends. The work was composing a new authoring surface entirely out of that existing infrastructure rather than building new systems — a harder engineering problem than greenfield, because every design decision had to fit constraints already set by systems I didn't own.</p>
+      </div>
+
+      <div class="case" id="platform-integrations">
+        <h2>Platform SDK integrations — Twitch Drops &amp; Discord</h2>
+        <div class="case-meta">Scopely · Senior software engineer · Unity, C#, C++</div>
+        <div class="case-titles">Titles: Marvel Strike Force · Star Trek Fleet Command · WWE Champions</div>
+        <div class="disc-tags"><span class="disc-tag">Platform &amp; SDK</span></div>
+        <p>Platform SDKs and services integrate directly into live game clients and servers — most of that work extends systems already owned by other teams, which means ramping up in unfamiliar codebases fast and without disrupting players already live.</p>
+        <p>I built backend integrations for <strong>Twitch Drops and Discord</strong>, extending existing platform services and improving client-to-service communication for live-ops campaigns. I also profile and resolve SDK performance issues across multiple titles ahead of partner delivery, contributed to an early-stage Unreal Engine SDK initiative evaluating architecture and integration patterns, and review code and technical design documents across internal and partner teams while mentoring two mid-level engineers.</p>
+      </div>
+
+      <div class="case" id="lunch-a-palooza">
+        <h2>Lunch A Palooza — Xbox One and PS4 ports, certification owned solo</h2>
+        <div class="case-meta">Seashell Studio · Game Programmer · Unity, C#</div>
+        <div class="case-titles">Titles: Lunch A Palooza</div>
+        <div class="disc-tags"><span class="disc-tag">Porting</span><span class="disc-tag">Gameplay</span></div>
+        <p>A local multiplayer party game built for PC needed to reach three console ecosystems, each with its own certification requirements, platform services and failure modes — on a small team with no dedicated porting engineer.</p>
+        <p>I was <strong>sole engineer on both the Xbox One and PS4 ports</strong> — development, build and release setup, QA, and certification feedback through to release approval on both, implementing platform-specific services including achievements, cloud saves and player profile management against each platform's requirements. On the gameplay side I built and tuned the physics-driven combat, input handling for four simultaneous local players, and the UI responsiveness a couch party game lives or dies on.</p>
+        <p>It released on <strong>all four platforms</strong> — Steam, Xbox One, PS4 and Switch — with <strong>both console certifications carried solo</strong> from submission to approval.</p>
+        <div class="case-links">
+          <a class="btn" href="https://store.steampowered.com/app/1113770/Lunch_A_Palooza/" target="_blank" rel="noopener">Steam page</a>
+        </div>
+      </div>
+
+      <p class="also-shipped">Every title I've shipped — at Scopely, Digital Vault Studio and Seashell Studio — is listed on the <a href="/#games">home page</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>Alfonso Iván Almanza González — Mexico City</div>
+    <div>English (fluent) · Spanish (native)</div>
+  </div>
+</footer>
+
+</body>
+</html>

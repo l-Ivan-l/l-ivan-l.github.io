@@ -1,0 +1,91 @@
+{
+  "_comment": "Fields ending in _html accept inline HTML (<strong>, <em>, <a>, &nbsp;). Every other field is plain text — type & and < directly, do not type entities. 'discipline' uses the fixed five-tag vocabulary (see MAINTENANCE.md) and is shared with experience.json.",
+
+  "page": {
+    "id": "work",
+    "path": "/work/",
+    "title": "Side projects",
+    "description": "Personal projects, built and shipped on my own time — a Verse/UEFN wave shooter, and an N64-inspired arcade game built from a single piece of cover art. Code, 3D art and release all mine."
+  },
+
+  "eyebrow": "Side projects",
+  "heading": "What I build on my own time",
+  "intro_html": "Self-directed work, finished and released — not prototypes. I write the code and I author the art. Professional credits are on the <a href=\"/experience/\">Experience</a> page.",
+
+  "projects": [
+    {
+      "slug": "ufortnite",
+      "draft": false,
+      "title": "U.F.Ortnite",
+      "meta": "UEFN · Verse · Released April 2025",
+      "role": "Solo — design, code, 3D art, UI, QA, release",
+      "hook": "A wave shooter in an engine with no object pooling and no profiler.",
+      "discipline": ["Gameplay", "Personal"],
+      "media": {
+        "embed": "https://www.youtube-nocookie.com/embed/d-z-5rCZ24c?rel=0"
+      },
+      "problem_html": "A self-directed project to learn Verse and the UEFN toolchain. UEFN gives you a sandbox and takes away most of your tools — no object pooling, no conventional profiler, hard memory ceilings, and a runtime that has to hold 60&nbsp;fps on Switch and mobile as well as PC. A wave-based arcade shooter is exactly the genre that breaks under those constraints.",
+      "approach_html": "I built a <strong>custom object pooling system in Verse</strong> to keep frame times stable during wave spawns, working around the absence of a built-in pooling pattern in the language, then designed the enemy wave system, enemy behaviour, score rank progression and level randomisation around a fixed entity budget. All 3D models, UI and animation are mine — the art was authored against the same budget the code enforced.",
+      "result_html": "A complete arcade gameplay loop, shipped and stable across every supported platform with no frame-rate regressions during peak waves. Scoped, finished and released solo.",
+      "metrics": [
+        { "value": "Stable frame times", "context": "across all supported platforms" },
+        { "value": "Custom pooling",     "context": "built around Verse's constraints" },
+        { "value": "Solo",               "context": "— code + art + release" }
+      ],
+      "tags": ["UEFN", "Verse", "Object pooling", "Gameplay systems", "Enemy AI", "Blender", "UI", "Performance"],
+      "links": [
+        { "label": "Play it", "href": "https://www.fortnite.com/@iv4n_al.go/5784-9846-6319", "primary": true }
+      ]
+    },
+    {
+      "slug": "monster-mash",
+      "draft": false,
+      "title": "Monster Mash",
+      "meta": "Windows & macOS · Released June 2023",
+      "role": "Solo — game design, code, 3D art, texturing, animation, VFX, release",
+      "hook": "One piece of fake cartridge art as the entire brief — design, art and rendering look reverse-engineered from it.",
+      "discipline": ["Gameplay", "Personal"],
+      "media": {
+        "image": "/media/monster-mash.jpg",
+        "alt": "Monster Mash cover art — the game's logo over a purple gradient"
+      },
+      "problem_html": "The whole brief was a single static image: a <strong>fictional N64 cartridge cover</strong> for a game that never existed, drawn by <a href=\"https://twitter.com/melodillo\" target=\"_blank\" rel=\"noopener\">@melodillo</a>. No design document, no asset list, no reference for how any of it moved. Everything had to be derived — what genre it was, what the loop was, and what that art would have looked like running on the hardware it was pretending to ship for.",
+      "approach_html": "I designed and built the entire game solo, and <strong>authored every asset in it</strong> — 3D models, textures, rigging and animation, VFX and UI. The N64 look is reconstructed rather than filtered: I modelled to hard low-poly silhouettes against a deliberately small texture budget and lit flat and high-contrast, so the era's constraints shaped the art while it was being authored instead of being applied as a post-process afterwards. The gameplay was designed around the same reading of the cover — a fast isometric arcade loop, ten stages, built for a gamepad.",
+      "result_html": "Shipped on Windows and macOS. It is the clearest single piece of evidence that the code and the art here are the same person: the only thing in it I didn't make is the cartridge cover it started from.",
+      "metrics": [
+        { "value": "1 reference image", "context": "the entire brief" },
+        { "value": "10 stages",         "context": "designed, built and shipped solo" },
+        { "value": "Every asset",       "context": "models, textures, animation, VFX, UI" }
+      ],
+      "tags": ["Game design", "3D modelling", "Texturing", "Rigging & animation", "VFX", "UI", "Level design", "Low-poly"],
+      "links": [
+        { "label": "Get it on itch.io", "href": "https://iv4n.itch.io/monster-mash", "primary": true }
+      ]
+    },
+    {
+      "slug": "project-three",
+      "draft": true,
+      "_note": "Hidden until it has real content. A hiring manager seeing '[ Project title ]' reads the whole page as unfinished — two strong projects beat three with a hole in the middle. Per the career plan the highest-value occupant is a Python DCC/pipeline tool: a Blender export-validation script or similar automated art-processing tool. It closes the site's one named gap (no Python tooling evidence exists despite Python being on the skills list) and is a weekend-sized project, not a career pivot. Fill every [ bracket ], then set draft to false. NOTE: this file is publicly readable — keep draft copy anodyne.",
+      "title": "[ Project title ]",
+      "meta": "Python · Blender · [ year ]",
+      "role": "Solo — [ what you owned: code, art, design, release ]",
+      "hook": "[ one line: the engineering problem, not the premise ]",
+      "discipline": ["Tools & Pipeline"],
+      "media": {
+        "video": "/media/project-three.mp4",
+        "placeholder": "Short loop showing the mechanic or system in motion."
+      },
+      "problem_html": "[ What was technically hard about this? A constraint, a performance ceiling, a system that didn't exist and you had to build. Avoid describing the premise of the game — describe the engineering problem. ]",
+      "approach_html": "[ The system you built and why you built it that way. Name the technique. If you authored the art too, say so — the code-plus-art combination is the thing that makes you a technical artist rather than either one alone. ]",
+      "result_html": "[ What it produced. Numbers if you have them — validation time, asset turnaround, error rate caught before it reached the engine. If you don't have numbers, say what became possible that wasn't before. ]",
+      "metrics": [
+        { "value": "[ metric ]", "context": "[ context ]" },
+        { "value": "[ metric ]", "context": "[ context ]" }
+      ],
+      "tags": ["Python", "Blender", "[ system ]", "[ art tool ]"],
+      "links": [
+        { "label": "Source",  "href": "https://github.com/l-Ivan-l", "primary": true }
+      ]
+    }
+  ]
+}

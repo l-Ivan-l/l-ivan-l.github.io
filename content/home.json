@@ -1,0 +1,34 @@
+{
+  "page": {
+    "id": "home",
+    "path": "/",
+    "title": "Iván Almanza — Tools & Pipeline Engineer",
+    "titleIsFull": true,
+    "description": "Senior software engineer building the tools other people use to make games — editor tooling, asset pipelines, developer-facing SDKs and self-service authoring tools. Shipped on Steam, Xbox, PS4, Switch, iOS and Apple Arcade."
+  },
+
+  "hero": {
+    "name": "Iván Almanza",
+    "role": ["Tools & Pipeline Engineer", "Platform & SDK"],
+    "pitch_html": "I make games and build the tools other people use to operate them: Unity Editor tooling, asset pipelines, developer-facing SDKs, and self-service authoring tools. Seven years across mobile, PC and console, including console porting and certification owned end to end. Currently at Scopely, building the platform tooling and SDKs the company’s live titles integrate.",
+    "cta": { "label": "Read the case studies", "href": "/experience/" }
+  },
+
+  "stats": [
+    { "num": "7",      "lbl": "Years in professional game dev" },
+    { "num": "6",      "lbl": "Platforms shipped on" }
+  ],
+
+  "teaser": {
+    "eyebrow": "Case studies",
+    "heading": "Projects to highlight",
+    "intro_html": "Tooling that shipped to teams, and games that shipped to players.",
+    "items": [
+      { "source": "experience", "slug": "fbx-prefab-pipeline" },
+      { "source": "experience", "slug": "visual-editor" },
+      { "source": "experience", "slug": "lunch-a-palooza" },
+      { "source": "projects",   "slug": "ufortnite" }
+    ],
+    "cta": { "label": "Side projects", "href": "/work/" }
+  }
+}

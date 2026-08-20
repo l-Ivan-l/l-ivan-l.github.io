@@ -1,0 +1,422 @@
+/* ============================================================
+   Iván Almanza — portfolio
+   Dark, mono-accented. No framework, no build step.
+   ============================================================ */
+
+:root{
+  --bg:#0a0c0f;
+  --bg-raised:#11141a;
+  --bg-card:#12161d;
+  --line:#1f2530;
+  --line-bright:#2c3542;
+  --text:#e6e9ef;
+  --text-dim:#98a2b3;
+  --text-faint:#667085;
+  --accent:#ffb347;
+  --accent-dim:#8a6431;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --max:1080px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    transition-duration:.01ms !important;
+  }
+}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit}
+img,video{display:block;max-width:100%}
+
+/* Visible keyboard focus — the default outline disappears on this dark bg. */
+a:focus-visible,button:focus-visible{
+  outline:2px solid var(--accent);
+  outline-offset:3px;
+  border-radius:3px;
+}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+
+/* Skip link — hidden until focused. */
+.skip{
+  position:absolute;left:-9999px;
+  font-family:var(--mono);font-size:12.5px;
+  padding:10px 16px;background:var(--accent);color:#0a0c0f;
+  border-radius:0 0 6px 0;text-decoration:none;font-weight:700;
+}
+.skip:focus{left:0;top:0;z-index:100}
+
+/* ---------- shared type ---------- */
+.eyebrow{
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:18px;
+}
+.eyebrow::before{content:"// ";color:var(--accent-dim)}
+h2{
+  font-size:clamp(24px,3.4vw,32px);
+  font-weight:600;
+  letter-spacing:-.02em;
+  margin-bottom:10px;
+}
+.section-note{color:var(--text-dim);font-size:15px;max-width:60ch;margin-bottom:44px}
+section{padding:88px 0;border-top:1px solid var(--line)}
+
+/* ---------- nav ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,12,15,.82);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{
+  max-width:var(--max);margin:0 auto;padding:14px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.nav-mark{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:-.01em}
+.nav-mark span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;font-size:13.5px;color:var(--text-dim)}
+.nav-links a{text-decoration:none;transition:color .15s}
+.nav-links a:hover{color:var(--accent)}
+/* mobile nav is handled in the MULTI-PAGE ADDITIONS block at the end */
+
+/* ---------- hero ---------- */
+.hero{padding:104px 0 88px}
+.hero-name{
+  font-size:clamp(38px,6.5vw,62px);
+  font-weight:700;letter-spacing:-.035em;line-height:1.05;
+  margin-bottom:20px;
+}
+.hero-role{
+  font-family:var(--mono);
+  font-size:clamp(13px,1.6vw,15px);
+  color:var(--accent);
+  letter-spacing:.02em;
+  margin-bottom:28px;
+}
+.hero-role .sep{color:var(--line-bright);margin:0 10px}
+.hero-pitch{
+  font-size:clamp(17px,2.1vw,19.5px);
+  color:var(--text-dim);
+  max-width:62ch;line-height:1.62;
+}
+.hero-pitch strong{color:var(--text);font-weight:500}
+.hero-currently{
+  font-size:14px;color:var(--text-faint);
+  margin-top:14px;max-width:62ch;
+}
+
+.stat-row{
+  display:flex;flex-wrap:wrap;gap:0;
+  margin:44px 0 36px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  overflow:hidden;
+}
+.stat{
+  flex:1 1 160px;padding:20px 22px;
+  border-right:1px solid var(--line);
+}
+.stat:last-child{border-right:none}
+.stat-num{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--accent);line-height:1.2}
+.stat-num .dot{color:var(--line-bright)}
+.stat-lbl{font-size:12.5px;color:var(--text-faint);margin-top:4px;letter-spacing:.01em}
+@media(max-width:680px){
+  .stat{flex:1 1 50%;border-bottom:1px solid var(--line)}
+  .stat:nth-child(2n){border-right:none}
+}
+
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--mono);font-size:12.5px;
+  padding:9px 16px;border-radius:6px;
+  border:1px solid var(--line-bright);
+  color:var(--text-dim);text-decoration:none;
+  transition:all .16s;
+}
+.btn:hover{border-color:var(--accent);color:var(--accent);background:rgba(255,179,71,.05)}
+.btn-primary{background:var(--accent);color:#0a0c0f;border-color:var(--accent);font-weight:700}
+.btn-primary:hover{background:#ffc26b;color:#0a0c0f;border-color:#ffc26b}
+
+/* ---------- project cards ---------- */
+.project{
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:var(--bg-card);
+  overflow:hidden;
+  margin-bottom:32px;
+}
+.media{
+  position:relative;
+  aspect-ratio:16/9;
+  background:
+    repeating-linear-gradient(45deg,#12161d 0 12px,#141922 12px 24px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+}
+.media video,.media img,.media iframe{
+  width:100%;height:100%;object-fit:cover;border:0;
+}
+.media-empty{
+  font-family:var(--mono);font-size:12px;color:var(--text-faint);
+  text-align:center;padding:20px;line-height:1.8;
+}
+.media-empty b{color:var(--accent);font-weight:500}
+
+.project-body{padding:28px 30px 30px}
+@media(max-width:560px){.project-body{padding:22px 20px 24px}}
+
+.project-head{
+  display:flex;flex-wrap:wrap;align-items:baseline;
+  justify-content:space-between;gap:12px;margin-bottom:6px;
+}
+.project h2{font-size:22px;font-weight:600;letter-spacing:-.02em}
+.project-meta{font-family:var(--mono);font-size:11.5px;color:var(--text-faint)}
+.project-role{
+  font-family:var(--mono);font-size:12px;color:var(--accent);
+  margin-bottom:18px;
+}
+
+/* Fixed five-tag discipline vocabulary (Tools & Pipeline, Platform & SDK,
+   Gameplay, Porting, Personal) — kept visually distinct from the
+   free-text tech .tags so a reader scanning either page finds the same
+   labels. See MAINTENANCE.md. */
+.disc-tags{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 16px}
+.disc-tag{
+  font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.04em;text-transform:uppercase;
+  padding:4px 9px;border-radius:3px;
+  border:1px solid var(--accent-dim);
+  color:var(--accent);
+}
+
+.block{margin-bottom:16px}
+.block-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--text-faint);margin-bottom:5px;
+}
+.block p{color:var(--text-dim);font-size:15px}
+.block strong{color:var(--text);font-weight:500}
+
+.metrics{
+  display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 18px;
+}
+.metric{
+  font-family:var(--mono);font-size:12px;
+  padding:7px 12px;border-radius:5px;
+  background:rgba(255,179,71,.07);
+  border:1px solid rgba(255,179,71,.22);
+  color:var(--accent);
+}
+.metric em{font-style:normal;color:var(--text-dim)}
+
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{
+  font-family:var(--mono);font-size:11px;
+  padding:4px 9px;border-radius:4px;
+  background:var(--bg-raised);border:1px solid var(--line);
+  color:var(--text-faint);
+}
+.project-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+
+/* ---------- experience (text-only) ---------- */
+.case{
+  border-left:2px solid var(--line);
+  padding:0 0 34px 26px;
+  position:relative;
+}
+.case:last-child{padding-bottom:0}
+.case::before{
+  content:"";position:absolute;left:-5px;top:7px;
+  width:8px;height:8px;border-radius:50%;
+  background:var(--accent);
+}
+.case h2{font-size:18.5px;font-weight:600;margin-bottom:3px;letter-spacing:-.015em}
+.case-meta{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-bottom:12px}
+.case .disc-tags{margin:0 0 16px}
+.also-shipped{
+  padding-top:26px;margin-top:6px;border-top:1px solid var(--line);
+  color:var(--text-faint);font-size:13.5px;
+}
+.also-shipped strong{color:var(--text-dim);font-weight:500}
+.case p{color:var(--text-dim);font-size:15px;margin-bottom:10px}
+.case strong{color:var(--text);font-weight:500}
+
+/* ---------- skills ---------- */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:8px;overflow:hidden;
+}
+.skill-col{background:var(--bg-card);padding:24px}
+.skill-col h3{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);
+  font-weight:500;margin-bottom:14px;
+}
+.skill-col ul{list-style:none}
+.skill-col li{
+  font-size:14.5px;color:var(--text-dim);
+  padding:5px 0;border-bottom:1px solid rgba(255,255,255,.03);
+}
+.skill-col li:last-child{border-bottom:none}
+
+/* ---------- contact ---------- */
+.contact-box{
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--bg-card);padding:40px 34px;text-align:center;
+}
+.contact-box h2{margin-bottom:12px}
+.contact-box p{color:var(--text-dim);max-width:52ch;margin:0 auto 26px}
+.contact-box .links{justify-content:center}
+
+.site-footer{border-top:1px solid var(--line)}
+.site-footer .wrap{
+  padding-top:36px;padding-bottom:56px;
+  font-family:var(--mono);font-size:11.5px;color:var(--text-faint);
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;
+}
+
+/* ============================================================
+   MULTI-PAGE ADDITIONS
+   Everything below was added when the single page split into
+   Home / Work / Experience / About.
+   ============================================================ */
+
+/* ---------- page structure ---------- */
+
+/* section{border-top} assumed stacked sections on one page. On an inner page
+   the first section sits directly under the sticky nav, drawing a double line. */
+/* The skip link moves focus here; tabindex=-1 focus needs no visible ring. */
+main:focus{outline:none}
+
+main > section:first-child{border-top:none}
+.page-head + section{border-top:none;padding-top:0}
+
+/* Anchor targets land under the sticky nav without this. */
+[id]{scroll-margin-top:88px}
+
+.page-head{padding:64px 0 28px}
+.page-head h1{
+  font-size:clamp(28px,4.4vw,40px);
+  font-weight:600;letter-spacing:-.025em;margin-bottom:10px;
+}
+.page-head .section-note{margin-bottom:0}
+
+/* ---------- nav: active state ---------- */
+.nav-links a.active{color:var(--text)}
+.nav-links a.active::after{
+  content:"";display:block;height:1px;
+  background:var(--accent);margin-top:3px;
+}
+a.nav-mark{text-decoration:none}
+
+/* ---------- home: work teaser ---------- */
+.teaser-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:16px;margin-bottom:28px;
+}
+.teaser{
+  display:block;text-decoration:none;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--bg-card);padding:22px 22px 20px;
+  transition:border-color .16s;
+}
+.teaser:hover{border-color:var(--line-bright)}
+.teaser-title{font-size:18px;font-weight:600;letter-spacing:-.02em;margin-bottom:4px}
+.teaser-meta{font-family:var(--mono);font-size:11.5px;color:var(--text-faint);margin-bottom:10px}
+.teaser-line{color:var(--text-dim);font-size:14.5px;margin-bottom:14px}
+.teaser .tags{margin-top:0}
+.teaser .disc-tags{margin:0}
+
+/* ---------- about: the code-and-art argument ---------- */
+.lede{
+  color:var(--text-dim);
+  font-size:clamp(16px,1.9vw,18px);
+  max-width:62ch;margin-bottom:16px;
+}
+.lede:last-child{margin-bottom:0}
+
+/* ---------- mobile navigation ---------- */
+/* Previously .nav-links{display:none} below 680px, which left a phone visitor
+   with no navigation at all. On four pages that strands them. Stack instead. */
+@media(max-width:680px){
+  .nav-inner{
+    flex-direction:column;align-items:flex-start;
+    gap:9px;padding:12px 20px;
+  }
+  .nav-links{gap:18px;font-size:12.5px;flex-wrap:wrap}
+  [id]{scroll-margin-top:118px}
+  .page-head{padding:44px 0 22px}
+}
+@media(max-width:360px){
+  .nav-mark .tail{display:none}
+}
+
+/* ---------- home: shipped-games grid ---------- */
+/* auto-fill, not the auto-fit used by .teaser-grid — with eight tiles auto-fit
+   stretches a lone trailing tile across a whole row at some widths. */
+.game-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(228px,1fr));
+  gap:14px;
+}
+.game{
+  display:flex;flex-direction:column;
+  border:1px solid var(--line);border-radius:10px;
+  background:var(--bg-card);overflow:hidden;
+}
+.game-link{text-decoration:none;transition:border-color .16s}
+.game-link:hover{border-color:var(--accent)}
+
+/* Same hatch as .media, so a cover-less tile matches the placeholder language
+   already used for missing gameplay capture. */
+.game-cover{
+  aspect-ratio:16/9;
+  border-bottom:1px solid var(--line);
+  background:repeating-linear-gradient(45deg,#12161d 0 12px,#141922 12px 24px);
+  display:flex;align-items:center;justify-content:center;
+}
+.game-cover img{width:100%;height:100%;object-fit:cover}
+.game-cover-fallback{
+  font-family:var(--mono);font-size:12.5px;color:var(--text-faint);
+  text-align:center;padding:14px;line-height:1.5;
+}
+
+.game-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.game-title{font-size:15.5px;font-weight:600;letter-spacing:-.015em;margin-bottom:3px}
+.game-meta{font-family:var(--mono);font-size:11px;color:var(--text-faint);margin-bottom:8px}
+.game-role{font-size:13.5px;color:var(--text-dim);line-height:1.5}
+.game .disc-tags{margin:10px 0 0;gap:6px;padding-top:2px}
+.games-note{margin-top:22px;color:var(--text-faint);font-size:13.5px;max-width:64ch}
+
+@media(max-width:560px){
+  .game-grid{grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:12px}
+  .game-body{padding:12px 13px 14px}
+  .game-title{font-size:14.5px}
+  .game-role{font-size:12.5px}
+}
+
+/* ---------- experience: title cross-reference + links ---------- */
+.case-titles{
+  font-family:var(--mono);font-size:11px;color:var(--text-faint);
+  margin-bottom:12px;
+}
+.case-links{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}

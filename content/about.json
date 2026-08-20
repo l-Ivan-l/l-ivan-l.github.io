@@ -1,0 +1,44 @@
+{
+  "page": {
+    "id": "about",
+    "path": "/about/",
+    "title": "About",
+    "description": "I build the tools other people use to make games — and I write the code and author the art, which is why the tools I build for artists actually get used."
+  },
+
+  "eyebrow": "About",
+  "heading": "Making games and building tools to operate them",
+  "argument_html": [
+    "Editor tooling, asset pipelines, developer-facing SDKs, self-service authoring tools — seven years in the industry spanning from an indie studio to a large live-ops publisher.",
+    "I feel comfortable diving into any area of game development and any existing codebase, I enjoy building tools that will be used to make better games and to provide a better experience to the people that operates them."
+  ],
+
+  "toolset": {
+    "eyebrow": "Toolset",
+    "heading": "What I work in",
+    "intro_html": "My day to day tools at both professional and personal projects.",
+    "columns": [
+      {
+        "heading": "Game client & server",
+        "items": ["C#", "Unity", "Unreal Engine 5", "UEFN / Verse", "C++"]
+      },
+      {
+        "heading": "Tools & pipeline",
+        "items": ["Unity Editor tooling", "Asset import pipelines", "SDK & API design", "Self-service authoring tools", "Python"]
+      },
+      {
+        "heading": "Art & content",
+        "items": ["Blender", "Unity VFX", "Pixel art & animation", "UI authoring", "Shader authoring"]
+      },
+      {
+        "heading": "Pipeline & production",
+        "items": ["Git, Perforce", "CI/CD pipelines (releases, builds, testing)", "Profiling & optimisation", "Console certification", "Code review, TDDs, mentoring"]
+      }
+    ]
+  },
+
+  "contact": {
+    "heading": "Let's talk",
+    "body_html": "Open to tools, pipeline, platform or generalist game engineer roles. Based in Mexico City."
+  }
+}

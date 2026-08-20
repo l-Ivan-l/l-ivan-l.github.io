@@ -1,0 +1,80 @@
+{
+  "_comment": "Professional shipped titles, newest studio first. Covers are public store key art only — never internal art, screenshots, or unannounced titles. This file is publicly fetchable, so keep every field publishable. 'discipline' uses the fixed five-tag vocabulary shared with projects.json and experience.json.",
+
+  "eyebrow": "Shipped",
+  "heading": "Games I've worked on",
+  "intro_html": "Eight titles across three studios — some as a game engineer, some as the person building the platform SDKs and tooling the game teams integrate.",
+  "note_html": "At Scopely I build the shared platform SDKs and developer tooling these titles integrate, rather than working on the game teams themselves.",
+
+  "games": [
+    {
+      "slug": "marvel-strike-force",
+      "title": "Marvel Strike Force",
+      "meta": "Scopely · 2023–present · Mobile",
+      "role": "Platform tooling and SDKs — primary support, and lead stakeholder on Visual Editor",
+      "discipline": ["Platform & SDK", "Tools & Pipeline"],
+      "cover": { "image": "/media/games/marvel-strike-force.jpg", "alt": "Marvel Strike Force key art" },
+      "href": "/experience/#visual-editor"
+    },
+    {
+      "slug": "star-trek-fleet-command",
+      "title": "Star Trek Fleet Command",
+      "meta": "Scopely · 2023–present · Mobile",
+      "role": "Platform tooling and SDKs — primary support",
+      "discipline": ["Platform & SDK"],
+      "cover": { "image": "/media/games/star-trek-fleet-command.jpg", "alt": "Star Trek Fleet Command key art" }
+    },
+    {
+      "slug": "wwe-champions",
+      "title": "WWE Champions",
+      "meta": "Scopely · 2023–present · Mobile",
+      "role": "Platform tooling and SDKs — primary support",
+      "discipline": ["Platform & SDK"],
+      "cover": { "image": "/media/games/wwe-champions.jpg", "alt": "WWE Champions key art" }
+    },
+    {
+      "slug": "adventure-escape-mysteries",
+      "title": "Adventure Escape Mysteries",
+      "meta": "Digital Vault Studio · 2021–2023 · Multiplatform",
+      "_note": "TODO: replace the group-level role line with what you specifically built on this title. The repo and both résumés only describe the Tilting Point titles as a group.",
+      "role": "Multiplatform release engineering for publisher Tilting Point",
+      "discipline": ["Porting"],
+      "cover": { "image": "/media/games/adventure-escape-mysteries.jpg", "alt": "Adventure Escape Mysteries key art" }
+    },
+    {
+      "slug": "mms-adventure",
+      "title": "M&M's Adventure",
+      "meta": "Digital Vault Studio · 2021–2023 · Multiplatform",
+      "_note": "TODO: same as above — needs per-title detail.",
+      "role": "Multiplatform release engineering for publisher Tilting Point",
+      "discipline": ["Porting"],
+      "cover": { "image": "/media/games/mms-adventure.jpg", "alt": "M&M's Adventure key art" }
+    },
+    {
+      "slug": "astrokings",
+      "title": "ASTROKINGS",
+      "meta": "Digital Vault Studio · 2021–2023 · Multiplatform",
+      "_note": "TODO: same as above — needs per-title detail.",
+      "role": "Multiplatform release engineering for publisher Tilting Point",
+      "discipline": ["Porting"],
+      "cover": { "image": "/media/games/astrokings.jpg", "alt": "ASTROKINGS key art" }
+    },
+    {
+      "slug": "lunch-a-palooza",
+      "title": "Lunch A Palooza",
+      "meta": "Seashell Studio · 2020 · Steam, Xbox One, PS4, Switch",
+      "role": "Sole engineer on the Xbox One and PS4 ports — development, certification, release",
+      "discipline": ["Porting", "Gameplay"],
+      "cover": { "image": "/media/games/lunch-a-palooza.jpg", "alt": "Lunch A Palooza key art" },
+      "href": "/experience/#lunch-a-palooza"
+    },
+    {
+      "slug": "running-fable",
+      "title": "Running Fable",
+      "meta": "Seashell Studio · 2022 · Steam, console, mobile",
+      "role": "Early development — terrain-aligned item placement, tutorial onboarding flow, input handling",
+      "discipline": ["Gameplay"],
+      "cover": { "image": "/media/games/running-fable.jpg", "alt": "Running Fable key art" }
+    }
+  ]
+}

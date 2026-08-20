@@ -1,0 +1,30 @@
+# ---------------------------------------------------------------
+# Private source material — never published.
+# Résumés, career strategy, anything with personal contact details.
+# ---------------------------------------------------------------
+_private/
+
+# ---------------------------------------------------------------
+# Claude / AI tooling — local only.
+# CLAUDE.md holds private career-positioning strategy, so it must
+# stay out of a repo that serves every committed file on the web.
+# ---------------------------------------------------------------
+CLAUDE.md
+CLAUDE.local.md
+.claude/
+.claudeignore
+.mcp.json
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.tmp
+.~lock.*#
+
+# Node, if a build step is ever added
+node_modules/
+dist/
+.cache/

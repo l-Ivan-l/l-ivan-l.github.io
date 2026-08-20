@@ -1,0 +1,76 @@
+{
+  "_comment": "Mostly NDA-safe, text only. There is deliberately no media field on a case — this work cannot carry screenshots or product imagery. Do not add one. A case may carry optional \"titles\" (games it touched, cross-referencing the home grid) and \"links\" (public buttons); neither is media. 'discipline' uses the fixed five-tag vocabulary (see MAINTENANCE.md) and is shared with projects.json so a reader scanning either page finds the same labels.",
+
+  "page": {
+    "id": "experience",
+    "path": "/experience/",
+    "title": "Experience",
+    "description": "Editor tooling, developer-facing SDKs and self-service authoring tools built at Scopely, Digital Vault Studio and Seashell Studio."
+  },
+
+  "eyebrow": "Professional experience",
+  "heading": "Tools other people build games with",
+  "intro_html": "Most of this work is under NDA, so there are no screenshots — but the problems and the approach are worth reading. This is where most of the tooling, platform and console evidence lives.",
+
+  "cases": [
+    {
+      "draft": false,
+      "slug": "fbx-prefab-pipeline",
+      "title": "Unity Editor asset pipeline — FBX to game-ready prefab",
+      "meta": "Digital Vault Studio · Game Programmer · Unity, C#",
+      "hook": "One pass from DCC export to in-game object, at hundreds-of-models scale.",
+      "discipline": ["Tools & Pipeline"],
+      "paragraphs_html": [
+        "A physics-driven match game under a licensed IP needed hundreds of unique 3D models integrated by hand, one at a time — material presets, colliders, catalog entries, category and tuning fields. The pipeline was the bottleneck, not the modelling.",
+        "I <strong>helped build and extend a Unity Editor asset pipeline tool</strong> that took an imported FBX and ran the whole setup in a single pass: applying established material and texture presets, generating colliders from mesh shape, registering the entry in the ScriptableObject catalog, and exposing category and tuning fields for a manual pass at the end.",
+        "It removed most per-model manual setup at hundreds-of-models scale and gave artists a repeatable path from DCC export straight to in-game object — the kind of tool that gets used because it's faster than working around it."
+      ]
+    },
+    {
+      "draft": false,
+      "slug": "visual-editor",
+      "title": "Visual Editor — self-service In-App Message authoring",
+      "meta": "Scopely · Technical lead · Unity, Java",
+      "titles": ["Marvel Strike Force"],
+      "hook": "Composing a new authoring surface entirely out of existing infrastructure — no new client release.",
+      "discipline": ["Tools & Pipeline", "Platform & SDK"],
+      "paragraphs_html": [
+        "Changing an in-app message meant shipping a new client build, so every copy fix and every live-ops message waited on a full release cycle. Non-technical marketing and live-ops staff had no way to ship on their own.",
+        "I was <strong>technical lead for Visual Editor</strong>, a self-service authoring tool spanning four teams — the platform web console, platform backend services, UX, and Marvel Strike Force as lead stakeholder. My contribution was the translation layer converting console-authored message definitions into a format the platform rendering SDK consumes at runtime, and the client-side SDK extension that renders it.",
+        "The infrastructure to render and deliver messages already existed on both ends. The work was composing a new authoring surface entirely out of that existing infrastructure rather than building new systems — a harder engineering problem than greenfield, because every design decision had to fit constraints already set by systems I didn't own."
+      ]
+    },
+    {
+      "draft": false,
+      "slug": "platform-integrations",
+      "title": "Platform SDK integrations — Twitch Drops & Discord",
+      "meta": "Scopely · Senior software engineer · Unity, C#, C++",
+      "titles": ["Marvel Strike Force", "Star Trek Fleet Command", "WWE Champions"],
+      "hook": "Extending existing platform services into live game clients without disrupting live players.",
+      "discipline": ["Platform & SDK"],
+      "paragraphs_html": [
+        "Platform SDKs and services integrate directly into live game clients and servers — most of that work extends systems already owned by other teams, which means ramping up in unfamiliar codebases fast and without disrupting players already live.",
+        "I built backend integrations for <strong>Twitch Drops and Discord</strong>, extending existing platform services and improving client-to-service communication for live-ops campaigns. I also profile and resolve SDK performance issues across multiple titles ahead of partner delivery, contributed to an early-stage Unreal Engine SDK initiative evaluating architecture and integration patterns, and review code and technical design documents across internal and partner teams while mentoring two mid-level engineers."
+      ]
+    },
+    {
+      "draft": false,
+      "slug": "lunch-a-palooza",
+      "title": "Lunch A Palooza — Xbox One and PS4 ports, certification owned solo",
+      "meta": "Seashell Studio · Game Programmer · Unity, C#",
+      "titles": ["Lunch A Palooza"],
+      "hook": "Four platforms, two console certifications, no dedicated porting engineer.",
+      "discipline": ["Porting", "Gameplay"],
+      "paragraphs_html": [
+        "A local multiplayer party game built for PC needed to reach three console ecosystems, each with its own certification requirements, platform services and failure modes — on a small team with no dedicated porting engineer.",
+        "I was <strong>sole engineer on both the Xbox One and PS4 ports</strong> — development, build and release setup, QA, and certification feedback through to release approval on both, implementing platform-specific services including achievements, cloud saves and player profile management against each platform's requirements. On the gameplay side I built and tuned the physics-driven combat, input handling for four simultaneous local players, and the UI responsiveness a couch party game lives or dies on.",
+        "It released on <strong>all four platforms</strong> — Steam, Xbox One, PS4 and Switch — with <strong>both console certifications carried solo</strong> from submission to approval."
+      ],
+      "links": [
+        { "label": "Steam page", "href": "https://store.steampowered.com/app/1113770/Lunch_A_Palooza/" }
+      ]
+    }
+  ],
+
+  "also_shipped_html": "Every title I've shipped — at Scopely, Digital Vault Studio and Seashell Studio — is listed on the <a href=\"/#games\">home page</a>."
+}
